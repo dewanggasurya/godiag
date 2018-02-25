@@ -1,10 +1,11 @@
 package diagnostic_test
 
 import (
-	"eaciit/diagnostic"
-	"eaciit/diagnostic/tasks"
 	"errors"
 	"testing"
+
+	"github.com/dewanggasurya/godiag/diagnostic"
+	"github.com/dewanggasurya/godiag/diagnostic/tasks"
 )
 
 func TestDiagnostic(t *testing.T) {
