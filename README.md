@@ -43,7 +43,7 @@ func main() {
 	t.Log("FailedTask is also registered perfectly")
 
 	//=== Adding pre-defined task and check if nginx is running
-	if e := d.Register("Nginx", tasks.TaskIsProcessRunning("nginx")); e != nil {
+	if e := d.Register("Nginx", tasks.IsProcessRunning("nginx")); e != nil {
 		panic(e)
 	}
 	

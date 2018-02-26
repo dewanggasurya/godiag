@@ -11,7 +11,9 @@ import (
 	"eaciit/diagnostic"
 )
 
-func TaskIsProcessRunning(process string) diagnostic.Task {
+//IsProcessRunning Pre-defined task that is used for checking wether a process
+//is currently running or not
+func IsProcessRunning(process string) diagnostic.Task {
 	var out, err bytes.Buffer
 	var e error
 	var cmd *exec.Cmd

@@ -1,11 +1,11 @@
-package diagnostic_test
+package godiag
 
 import (
+	"eaciit/diagnostic"
 	"errors"
 	"testing"
 
-	"github.com/dewanggasurya/godiag/diagnostic"
-	"github.com/dewanggasurya/godiag/diagnostic/tasks"
+	"github.com/dewanggasurya/godiag/tasks"
 )
 
 func TestDiagnostic(t *testing.T) {
@@ -26,7 +26,7 @@ func TestDiagnostic(t *testing.T) {
 	t.Log("FailedTask is also registered perfectly")
 
 	//=== Adding pre-defined task and check if nginx is running
-	if e := d.Register("Nginx", tasks.TaskIsProcessRunning("nginx")); e != nil {
+	if e := d.Register("Nginx", tasks.IsProcessRunning("nginx")); e != nil {
 		t.Error(e)
 	}
 	t.Log("Nginx is also registered perfectly")
